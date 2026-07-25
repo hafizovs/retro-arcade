@@ -1,0 +1,52 @@
+<div class="shell">
+  <rae-toolbar />
+
+  <div
+    class="cabinet"
+    raeKeyboardCapture
+    [gameId]="arcade.activeGameId()"
+    [phase]="arcade.phase()"
+    (gameInput)="onGameInput($event)"
+  >
+    <aside class="cabinet__left">
+      <rae-game-selector (gameSelected)="onGameSelected($event)" />
+      <rae-leaderboard />
+    </aside>
+
+    <main class="cabinet__center">
+      <rae-arcade-canvas
+        [gameId]="arcade.activeGameId()"
+        [phase]="arcade.phase()"
+      />
+      <rae-game-controls
+        (start)="startGame()"
+        (pause)="pauseGame()"
+        (reset)="resetGame()"
+      />
+    </main>
+
+    <aside class="cabinet__right">
+      <rae-telemetry-panel (difficultyChange)="onDifficultyChange($event)" />
+    </aside>
+
+    <div class="cabinet__status">
+      <rae-status-bar />
+    </div>
+  </div>
+</div>
+
+@if (ui.pauseOverlayOpen() && arcade.phase() === 'paused') {
+  <rae-pause-overlay (resume)="resumeGame()" (reset)="resetGame()" />
+}
+
+@if (ui.gameOverOverlayOpen() && arcade.phase() === 'gameover') {
+  <rae-game-over-overlay
+    (save)="saveScore($event)"
+    (playAgain)="playAgain()"
+    (menu)="backToMenu()"
+  />
+}
+
+@if (ui.helpOpen()) {
+  <rae-help-overlay (close)="closeHelp()" />
+}

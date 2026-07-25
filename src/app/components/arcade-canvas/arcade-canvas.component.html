@@ -1,0 +1,9 @@
+<div class="crt-frame crt-frame__scan">
+  <canvas
+    #canvas
+    class="crt-frame__canvas"
+    role="img"
+    [attr.aria-label]="ariaLabel()"
+    (pointermove)="onPointerMove($event)"
+  ></canvas>
+</div>

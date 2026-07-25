@@ -1,0 +1,30 @@
+<header class="toolbar">
+  <h1 class="toolbar__brand">{{ i18n.t('toolbar.brand') }}</h1>
+  <div class="toolbar__spacer"></div>
+  <button
+    type="button"
+    class="toolbar__btn"
+    [attr.aria-label]="i18n.t('toolbar.theme')"
+    (click)="toggleTheme()"
+  >
+    {{ i18n.t('toolbar.theme') }}
+    <span class="toolbar__badge">{{ ui.themeId() === 'dark' ? 'D' : 'L' }}</span>
+  </button>
+  <button
+    type="button"
+    class="toolbar__btn"
+    [attr.aria-label]="i18n.t('toolbar.lang')"
+    (click)="toggleLang()"
+  >
+    {{ i18n.t('toolbar.lang') }}
+    <span class="toolbar__badge">{{ ui.localeId().toUpperCase() }}</span>
+  </button>
+  <button
+    type="button"
+    class="toolbar__btn"
+    [attr.aria-label]="i18n.t('toolbar.help')"
+    (click)="openHelp()"
+  >
+    {{ i18n.t('toolbar.help') }}
+  </button>
+</header>

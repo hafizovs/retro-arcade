@@ -1,0 +1,29 @@
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--rae-bg-panel);
+  border: 1px solid var(--rae-border);
+  border-radius: 10px;
+  font-family: var(--rae-font-ui);
+}
+
+.status__game {
+  font-family: var(--rae-font-display);
+  color: var(--rae-neon-cyan);
+}
+
+.status__phase {
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--rae-border-neon);
+  color: var(--rae-neon-lime);
+  font-family: var(--rae-font-mono);
+  font-size: 0.8rem;
+}
+
+.status__hint {
+  color: var(--rae-text-muted);
+}

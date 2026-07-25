@@ -1,0 +1,50 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  background: rgba(5, 6, 12, 0.72);
+  backdrop-filter: blur(2px);
+}
+
+.overlay__panel {
+  min-width: min(360px, 90vw);
+  padding: 24px;
+  border: 1px solid var(--rae-border-neon);
+  border-radius: 12px;
+  background: var(--rae-bg-panel-elevated);
+  box-shadow: 0 0 28px var(--rae-glow-magenta);
+  text-align: center;
+}
+
+.overlay__panel h2 {
+  margin: 0 0 18px;
+  font-family: var(--rae-font-display);
+  color: var(--rae-neon-magenta);
+}
+
+.overlay__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.overlay__btn {
+  padding: 10px 16px;
+  border: 1px solid var(--rae-border-neon);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--rae-text);
+  font-family: var(--rae-font-ui);
+  cursor: pointer;
+}
+
+.overlay__btn:hover {
+  background: color-mix(in srgb, var(--rae-accent) 12%, transparent);
+}
+
+.overlay__btn:focus-visible {
+  outline: 2px solid var(--rae-neon-lime);
+  outline-offset: 2px;
+}

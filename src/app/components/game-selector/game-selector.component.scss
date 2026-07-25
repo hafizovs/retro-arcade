@@ -1,0 +1,100 @@
+.selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selector__card {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--rae-border);
+  border-radius: 10px;
+  background: var(--rae-bg-panel);
+  color: var(--rae-text);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    box-shadow 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.selector__card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px var(--rae-glow-cyan);
+}
+
+.selector__card:focus-visible {
+  outline: 2px solid var(--rae-neon-magenta);
+  outline-offset: 2px;
+}
+
+.selector__card--active {
+  border-color: var(--rae-neon-cyan);
+  box-shadow:
+    0 0 14px var(--rae-glow-cyan),
+    inset 0 0 18px rgba(0, 240, 255, 0.08);
+}
+
+.selector__card--lime.selector__card--active {
+  border-color: var(--rae-neon-lime);
+  box-shadow: 0 0 14px rgba(184, 255, 0, 0.35);
+}
+
+.selector__card--magenta.selector__card--active {
+  border-color: var(--rae-neon-magenta);
+  box-shadow: 0 0 14px var(--rae-glow-magenta);
+}
+
+.selector__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.selector__text strong {
+  font-family: var(--rae-font-display);
+  font-size: 1rem;
+}
+
+.selector__text span {
+  color: var(--rae-text-muted);
+  font-family: var(--rae-font-ui);
+  font-size: 0.85rem;
+}
+
+.glyph {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.glyph--tetris {
+  background:
+    linear-gradient(#00f0ff 0 0) 4px 8px / 10px 10px no-repeat,
+    linear-gradient(#00f0ff 0 0) 14px 8px / 10px 10px no-repeat,
+    linear-gradient(#00f0ff 0 0) 24px 8px / 10px 10px no-repeat,
+    linear-gradient(#00f0ff 0 0) 14px 18px / 10px 10px no-repeat;
+  background-color: rgba(0, 240, 255, 0.08);
+}
+
+.glyph--snake {
+  background:
+    radial-gradient(circle at 70% 30%, #39ff88 0 35%, transparent 36%),
+    linear-gradient(#1a8844 0 0) 6px 16px / 24px 8px no-repeat;
+  background-color: rgba(57, 255, 136, 0.08);
+}
+
+.glyph--breakout {
+  background:
+    linear-gradient(#ff00aa 0 0) 4px 6px / 28px 8px no-repeat,
+    linear-gradient(#00f0ff 0 0) 8px 16px / 20px 8px no-repeat,
+    radial-gradient(circle at 50% 78%, #fff 0 18%, transparent 19%);
+  background-color: rgba(255, 0, 170, 0.08);
+}

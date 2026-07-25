@@ -1,0 +1,31 @@
+<section class="leaderboard">
+  <h2 class="leaderboard__title">{{ i18n.t('leaderboard.title') }}</h2>
+  @if (entries().length === 0) {
+    <p class="leaderboard__empty">{{ i18n.t('leaderboard.empty') }}</p>
+  } @else {
+    <table class="leaderboard__table">
+      <thead>
+        <tr>
+          <th>{{ i18n.t('leaderboard.rank') }}</th>
+          <th>{{ i18n.t('leaderboard.name') }}</th>
+          <th>{{ i18n.t('leaderboard.score') }}</th>
+          <th>{{ i18n.t('leaderboard.difficulty') }}</th>
+          <th>{{ i18n.t('leaderboard.date') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (entry of entries(); track entry.id; let i = $index) {
+          <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ entry.playerName }}</td>
+            <td>{{ entry.score }}</td>
+            <td>
+              <span class="badge">{{ entry.difficulty }}</span>
+            </td>
+            <td>{{ formatDate(entry.achievedAtIso) }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</section>

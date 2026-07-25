@@ -1,0 +1,32 @@
+<div class="controls">
+  <button
+    type="button"
+    class="controls__btn controls__btn--start"
+    [attr.aria-label]="i18n.t('controls.start')"
+    [disabled]="!canStart()"
+    (click)="start.emit()"
+  >
+    <span class="icon icon--play" aria-hidden="true"></span>
+    {{ i18n.t('controls.start') }}
+  </button>
+  <button
+    type="button"
+    class="controls__btn"
+    [attr.aria-label]="i18n.t('controls.pause')"
+    [attr.aria-pressed]="arcade.phase() === 'paused'"
+    [disabled]="!canPause()"
+    (click)="pause.emit()"
+  >
+    <span class="icon icon--pause" aria-hidden="true"></span>
+    {{ i18n.t('controls.pause') }}
+  </button>
+  <button
+    type="button"
+    class="controls__btn"
+    [attr.aria-label]="i18n.t('controls.reset')"
+    (click)="reset.emit()"
+  >
+    <span class="icon icon--reset" aria-hidden="true"></span>
+    {{ i18n.t('controls.reset') }}
+  </button>
+</div>
