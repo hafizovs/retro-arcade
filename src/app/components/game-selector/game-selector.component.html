@@ -1,0 +1,31 @@
+<section class="selector" aria-label="Games">
+  @for (game of games; track game.id) {
+    <button
+      type="button"
+      class="selector__card"
+      [class]="'selector__card selector__card--' + game.accent"
+      [class.selector__card--active]="arcade.activeGameId() === game.id"
+      role="button"
+      [attr.aria-pressed]="arcade.activeGameId() === game.id"
+      (click)="select(game.id)"
+    >
+      <div class="selector__icon" aria-hidden="true">
+        @switch (game.id) {
+          @case ('tetris') {
+            <span class="glyph glyph--tetris"></span>
+          }
+          @case ('snake') {
+            <span class="glyph glyph--snake"></span>
+          }
+          @case ('breakout') {
+            <span class="glyph glyph--breakout"></span>
+          }
+        }
+      </div>
+      <div class="selector__text">
+        <strong>{{ i18n.t(game.titleKey) }}</strong>
+        <span>{{ i18n.t(game.subtitleKey) }}</span>
+      </div>
+    </button>
+  }
+</section>

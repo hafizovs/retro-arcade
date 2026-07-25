@@ -1,0 +1,52 @@
+<div class="overlay" role="dialog" aria-modal="true">
+  <div class="overlay__panel">
+    <div class="overlay__head">
+      <h2>{{ i18n.t('help.title') }}</h2>
+      <button type="button" class="overlay__close" (click)="close.emit()">
+        {{ i18n.t('help.close') }}
+      </button>
+    </div>
+
+    <h3>{{ i18n.t('help.hotkeys') }}</h3>
+    <table class="overlay__table">
+      <tbody>
+        @for (row of hotkeys; track row.key) {
+          <tr>
+            <td><kbd>{{ row.key }}</kbd></td>
+            <td>{{ row.action }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <div class="overlay__rules">
+      <section>
+        <h3>{{ i18n.t('help.tetris') }}</h3>
+        <ul>
+          <li>{{ i18n.t('help.tetris.r1') }}</li>
+          <li>{{ i18n.t('help.tetris.r2') }}</li>
+          <li>{{ i18n.t('help.tetris.r3') }}</li>
+          <li>{{ i18n.t('help.tetris.r4') }}</li>
+        </ul>
+      </section>
+      <section>
+        <h3>{{ i18n.t('help.snake') }}</h3>
+        <ul>
+          <li>{{ i18n.t('help.snake.r1') }}</li>
+          <li>{{ i18n.t('help.snake.r2') }}</li>
+          <li>{{ i18n.t('help.snake.r3') }}</li>
+          <li>{{ i18n.t('help.snake.r4') }}</li>
+        </ul>
+      </section>
+      <section>
+        <h3>{{ i18n.t('help.breakout') }}</h3>
+        <ul>
+          <li>{{ i18n.t('help.breakout.r1') }}</li>
+          <li>{{ i18n.t('help.breakout.r2') }}</li>
+          <li>{{ i18n.t('help.breakout.r3') }}</li>
+          <li>{{ i18n.t('help.breakout.r4') }}</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

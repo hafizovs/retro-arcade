@@ -1,0 +1,66 @@
+<section class="telemetry" aria-label="Telemetry">
+  <h2 class="telemetry__title">{{ i18n.t('telemetry.score') }}</h2>
+  <div class="telemetry__score" aria-live="polite">
+    {{ arcade.telemetry().currentScore }}
+  </div>
+
+  <dl class="telemetry__list">
+    <div>
+      <dt>{{ i18n.t('telemetry.sessionHigh') }}</dt>
+      <dd>{{ arcade.telemetry().sessionHighScore }}</dd>
+    </div>
+    <div>
+      <dt>{{ i18n.t('telemetry.storedHigh') }}</dt>
+      <dd>{{ arcade.telemetry().storedHighScore }}</dd>
+    </div>
+    <div>
+      <dt>{{ i18n.t('telemetry.level') }}</dt>
+      <dd>{{ arcade.telemetry().level }}</dd>
+    </div>
+    <div>
+      <dt>{{ i18n.t('telemetry.tick') }}</dt>
+      <dd>{{ arcade.telemetry().tickIntervalMs }} ms</dd>
+    </div>
+    <div>
+      <dt>{{ i18n.t('telemetry.session') }}</dt>
+      <dd>{{ formatSession(arcade.telemetry().sessionElapsedMs) }}</dd>
+    </div>
+
+    @if (arcade.activeGameId() === 'tetris') {
+      <div>
+        <dt>{{ i18n.t('telemetry.lines') }}</dt>
+        <dd>{{ arcade.telemetry().linesCleared ?? 0 }}</dd>
+      </div>
+    }
+    @if (arcade.activeGameId() === 'snake') {
+      <div>
+        <dt>{{ i18n.t('telemetry.snakeLength') }}</dt>
+        <dd>{{ arcade.telemetry().snakeLength ?? 0 }}</dd>
+      </div>
+    }
+    @if (arcade.activeGameId() === 'breakout') {
+      <div>
+        <dt>{{ i18n.t('telemetry.bricks') }}</dt>
+        <dd>{{ arcade.telemetry().bricksRemaining ?? 0 }}</dd>
+      </div>
+    }
+  </dl>
+
+  <label class="telemetry__difficulty">
+    <span>{{ i18n.t('telemetry.difficulty') }}</span>
+    <select
+      [value]="arcade.difficultyId()"
+      [disabled]="arcade.phase() === 'running'"
+      (change)="onDifficultyChange($event)"
+    >
+      @for (id of difficulties; track id) {
+        <option [value]="id">{{ difficultyLabel(id) }}</option>
+      }
+    </select>
+  </label>
+  @if (arcade.phase() === 'running') {
+    <p class="telemetry__hint">
+      {{ i18n.t('telemetry.pauseToChangeDifficulty') }}
+    </p>
+  }
+</section>

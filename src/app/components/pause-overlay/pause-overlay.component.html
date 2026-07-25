@@ -1,0 +1,13 @@
+<div class="overlay" role="dialog" aria-modal="true">
+  <div class="overlay__panel">
+    <h2>{{ i18n.t('pause.title') }}</h2>
+    <div class="overlay__actions">
+      <button type="button" class="overlay__btn" (click)="resume.emit()">
+        {{ i18n.t('pause.resume') }}
+      </button>
+      <button type="button" class="overlay__btn" (click)="reset.emit()">
+        {{ i18n.t('pause.reset') }}
+      </button>
+    </div>
+  </div>
+</div>

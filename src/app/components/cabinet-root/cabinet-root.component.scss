@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+}
+
+.shell {
+  min-height: 100dvh;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background:
+    radial-gradient(ellipse at top, rgba(0, 240, 255, 0.08), transparent 45%),
+    radial-gradient(ellipse at bottom right, rgba(255, 0, 170, 0.08), transparent 40%),
+    var(--rae-bg-deep);
+}
+
+.cabinet {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 280px 1fr 240px;
+  grid-template-rows: 1fr auto;
+  gap: 12px;
+  min-height: 0;
+}
+
+.cabinet__left,
+.cabinet__right,
+.cabinet__center {
+  min-height: 0;
+  z-index: 10;
+}
+
+.cabinet__center {
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+.cabinet__center rae-arcade-canvas {
+  flex: 1;
+}
+
+.cabinet__status {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1199px) {
+  .cabinet {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .cabinet__center {
+    min-height: 380px;
+  }
+}

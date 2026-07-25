@@ -1,0 +1,32 @@
+<div class="overlay" role="dialog" aria-modal="true">
+  <div class="overlay__panel">
+    <h2>{{ i18n.t(titleKey()) }}</h2>
+    <p class="overlay__score-label">{{ i18n.t('gameover.score') }}</p>
+    <p class="overlay__score">{{ arcade.telemetry().currentScore }}</p>
+
+    <label class="overlay__field">
+      <span>{{ i18n.t('gameover.name') }}</span>
+      <input
+        #nameInput
+        type="text"
+        maxlength="16"
+        pattern="[a-zA-Z0-9 _-]*"
+        [value]="ui.playerNameDraft()"
+        [attr.aria-required]="true"
+        (input)="onNameInput($event)"
+      />
+    </label>
+
+    <div class="overlay__actions">
+      <button type="button" class="overlay__btn overlay__btn--primary" (click)="onSave()">
+        {{ i18n.t('gameover.save') }}
+      </button>
+      <button type="button" class="overlay__btn" (click)="playAgain.emit()">
+        {{ i18n.t('gameover.playAgain') }}
+      </button>
+      <button type="button" class="overlay__btn" (click)="menu.emit()">
+        {{ i18n.t('gameover.menu') }}
+      </button>
+    </div>
+  </div>
+</div>
