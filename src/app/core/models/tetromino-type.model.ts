@@ -1,1 +1,1 @@
-export type { TetrominoType } from '../../models/arcade.types';
+export type { TetrominoType } from './arcade.types';

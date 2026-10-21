@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CabinetRootComponent } from './components/cabinet-root/cabinet-root.component';
+import { CabinetRootComponent } from './core/layout/cabinet-root/cabinet-root.component';
 
 @Component({
   selector: 'rae-root',

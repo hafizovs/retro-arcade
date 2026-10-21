@@ -1,4 +1,4 @@
-import { GridPoint } from '../../models/arcade.types';
+import { GridPoint } from '../../core/models/arcade.types';
 
 export function hitsWall(
   head: GridPoint,

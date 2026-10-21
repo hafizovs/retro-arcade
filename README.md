@@ -1,3 +1,7 @@
+## Live demo
+
+https://hafizovs.github.io/retro-arcade/
+
 # Retro-Arcade Engine
 
 Интерактивный аркадный кабинет на **Angular 22+** (zoneless + Signals) с тремя играми на HTML5 Canvas 2D: **Тетрис**, **Змейка**, **Арканоид**.

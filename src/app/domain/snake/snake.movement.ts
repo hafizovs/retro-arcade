@@ -1,4 +1,4 @@
-import { Direction, GridPoint } from '../../models/arcade.types';
+import { Direction, GridPoint } from '../../core/models/arcade.types';
 
 export const DIRECTION_DELTA: Record<Direction, { dx: number; dy: number }> = {
   up: { dx: 0, dy: -1 },

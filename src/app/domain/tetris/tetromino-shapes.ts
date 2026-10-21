@@ -2,7 +2,7 @@ import {
   ShapeMatrix,
   TetrominoDefinition,
   TetrominoType,
-} from '../../models/arcade.types';
+} from '../../core/models/arcade.types';
 
 const I_R0: ShapeMatrix = [
   [0, 0, 0, 0],

@@ -3,7 +3,7 @@ import {
   ActivePiece,
   GridCell,
   TetrominoType,
-} from '../../models/arcade.types';
+} from '../../core/models/arcade.types';
 import { getShapeMatrix } from './tetromino-shapes';
 
 export function createEmptyRow(cols: number = TETRIS_COLS): GridCell[] {

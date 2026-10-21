@@ -1,4 +1,4 @@
-import { GridPoint } from '../../models/arcade.types';
+import { GridPoint } from '../../core/models/arcade.types';
 import { Rng } from '../math/rng';
 import { pointsEqual } from './snake.collision';
 

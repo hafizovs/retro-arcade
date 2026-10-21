@@ -1,5 +1,5 @@
 import { TETRIS_COLS, TETRIS_ROWS } from '../../core/constants/tetris.constants';
-import { GridCell } from '../../models/arcade.types';
+import { GridCell } from '../../core/models/arcade.types';
 import { createEmptyRow } from './tetris.collision';
 
 export function findFullRows(board: GridCell[][]): number[] {

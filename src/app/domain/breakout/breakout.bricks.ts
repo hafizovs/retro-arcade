@@ -7,7 +7,7 @@ import {
   BREAKOUT_HEIGHT,
   BREAKOUT_WIDTH,
 } from '../../core/constants/breakout.constants';
-import { BrickCell } from '../../models/arcade.types';
+import { BrickCell } from '../../core/models/arcade.types';
 
 export interface BrickLayout {
   brickWidth: number;

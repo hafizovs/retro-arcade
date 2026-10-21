@@ -1,4 +1,4 @@
-import { DifficultyId } from '../../models/arcade.types';
+import { DifficultyId } from '../models/arcade.types';
 
 export const TETRIS_GRAVITY_MS: Record<DifficultyId, number> = {
   easy: 800,

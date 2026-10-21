@@ -1,1 +1,1 @@
-export type { Direction } from '../../models/arcade.types';
+export type { Direction } from './arcade.types';

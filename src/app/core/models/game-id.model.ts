@@ -1,1 +1,1 @@
-export type { GameId } from '../../models/arcade.types';
+export type { GameId } from './arcade.types';

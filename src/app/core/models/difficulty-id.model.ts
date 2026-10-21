@@ -1,1 +1,1 @@
-export type { DifficultyId } from '../../models/arcade.types';
+export type { DifficultyId } from './arcade.types';

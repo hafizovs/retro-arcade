@@ -1,4 +1,4 @@
-import { TetrominoType } from '../../models/arcade.types';
+import { TetrominoType } from '../models/arcade.types';
 
 export const TETRIS_ROWS = 20;
 export const TETRIS_COLS = 10;

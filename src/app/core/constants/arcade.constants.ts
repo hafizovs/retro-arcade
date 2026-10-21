@@ -2,7 +2,7 @@ import {
   ArcadePhase,
   LEADERBOARD_SCHEMA_VERSION,
   LEADERBOARD_STORAGE_KEY,
-} from '../../models/arcade.types';
+} from '../models/arcade.types';
 
 export const MIN_TICK_MS = 16;
 export const MAX_TICK_MS = 2000;
