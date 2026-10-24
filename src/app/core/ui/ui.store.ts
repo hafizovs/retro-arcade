@@ -18,9 +18,9 @@ function readTheme(): ThemeId {
 function readLocale(): LocaleId {
   try {
     const value = sessionStorage.getItem(LOCALE_STORAGE_KEY);
-    return value === 'en' ? 'en' : 'ru';
+    return value === 'ru' ? 'ru' : 'en';
   } catch {
-    return 'ru';
+    return 'en';
   }
 }
 
