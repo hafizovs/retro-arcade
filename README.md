@@ -68,3 +68,7 @@ npm test
 - **Tetris** — 10×20 well, 7 pieces, wall kick, line clear, soft/hard drop
 - **Snake** — grid, 180° turns banned, apples, growth, collisions
 - **Breakout** — ball/paddle/bricks with HP, bounce angle from the impact point
+
+## Responsive layout
+
+Partial adaptive chrome for phone (~375px) and tablet (~768px): toolbars and panels stack or collapse on narrow viewports, with no page-level horizontal scroll. Desktop-first cores (canvas, boards, dense tables) stay simplified on small screens rather than a full mobile redesign.
