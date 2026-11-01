@@ -61,3 +61,49 @@
   font-size: 0.75rem;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 48px;
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .toolbar__brand {
+    flex: 1 1 100%;
+    font-size: 1.15rem;
+  }
+
+  .toolbar__spacer {
+    display: none;
+  }
+
+  .toolbar__btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 7px 10px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .toolbar {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .toolbar__brand {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .toolbar__btn {
+    flex: 1 1 calc(50% - 3px);
+    min-width: 0;
+    padding: 6px 8px;
+    font-size: 0.82rem;
+    gap: 6px;
+  }
+}

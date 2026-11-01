@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: clip;
+}
+
 html,
 body {
   margin: 0;
@@ -12,10 +16,19 @@ body {
 }
 
 body {
+  overflow-x: clip;
+  max-width: 100%;
   font-family: var(--rae-font-ui);
   background: var(--rae-bg-deep);
   color: var(--rae-text);
   -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
 }
 
 button,

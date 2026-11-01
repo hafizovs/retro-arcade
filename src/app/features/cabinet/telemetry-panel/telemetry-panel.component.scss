@@ -5,6 +5,7 @@
   border-radius: 10px;
   box-shadow: 0 0 16px rgba(255, 0, 170, 0.12);
   height: 100%;
+  min-width: 0;
 }
 
 .telemetry__title {
@@ -77,4 +78,29 @@
   color: var(--rae-neon-amber);
   font-size: 0.8rem;
   font-family: var(--rae-font-ui);
+}
+
+@media (max-width: 768px) {
+  .telemetry {
+    padding: 12px;
+  }
+
+  .telemetry__score {
+    font-size: 1.65rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .telemetry {
+    padding: 10px;
+  }
+
+  .telemetry__score {
+    font-size: 1.45rem;
+  }
+
+  .telemetry__list dt,
+  .telemetry__list dd {
+    font-size: 0.82rem;
+  }
 }
