@@ -4,6 +4,8 @@
   background: var(--rae-bg-panel);
   border: 1px solid var(--rae-border);
   border-radius: 10px;
+  min-width: 0;
+  overflow-x: auto;
 }
 
 .leaderboard__title {

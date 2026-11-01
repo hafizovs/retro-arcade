@@ -27,3 +27,33 @@
 .status__hint {
   color: var(--rae-text-muted);
 }
+
+@media (max-width: 768px) {
+  .status {
+    padding: 8px 10px;
+    gap: 8px;
+    font-size: 0.92rem;
+  }
+
+  .status__phase {
+    font-size: 0.75rem;
+  }
+
+  .status__hint {
+    flex: 1 1 100%;
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 375px) {
+  .status {
+    padding: 8px;
+    gap: 6px;
+    font-size: 0.88rem;
+  }
+
+  .status__game {
+    flex: 1 1 100%;
+  }
+}

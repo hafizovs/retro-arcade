@@ -1,8 +1,10 @@
 .controls {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin-top: 12px;
+  max-width: 100%;
 }
 
 .controls__btn {
@@ -82,4 +84,30 @@
   border: 2px solid currentColor;
   border-radius: 50%;
   border-right-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .controls__btn {
+    min-width: 96px;
+    padding: 9px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .controls__btn {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .controls__btn:last-child {
+    flex-basis: 100%;
+  }
 }
